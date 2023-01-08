@@ -1,32 +1,27 @@
-let search = document.getElementById(".search");
-let searchBtn = document.getElementById("searchBtn");
-comsole.log(searchBtn)
-let cityBtn;
-let cities = document.getElementById(".cities");
-let weatherContainer = document.getElementById("weather-container");
-let forecastContainer = document.getElementById("forecast-Container");
-let fiveDay = document.getElementById("five");
+// grab search button
+const searchBtn = document.getElementById("searchBtn");
+// Attach click listener to button
+searchBtn.addEventListener("click", fetchweather)
+
+// Get City Input
+let cityInput = document.getElementById("citysearch");
 
 
-let apiKey = "98e0a91b4e1016cd6861c0d2bb694d0b";
-let apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${citysearch}&limit=5&appid=${apiKey}`;
-let queryURL = `https://api.openweathermap.org/data/2.5/weather?q=` + citysearch + `&appid=` + `apiKey`;
 
+function fetchweather()  {
+	var userInputValue = cityInput.value.trim();
+	console.log("userInputValue", userInputValue)
+	if(userInputValue)
+		fetch(`https://api.openweathermap.org/geo/1.0/direct?appid=d24820a4b09e08d1bb27ae1a68013291&q=${userInputValue}`)
+			.then(function(res) {
+				return res.json()
+			})
+			.then(function(data) {
+				console.log(data);
+				press(data)
+			})
+}
 
-document.getElementById(".searchBtn").addEventListener("click", fetchweather);
-
-function fetchweather() 
-    var userInputValue = cities.value.trim();
-   console.log("userInputValue", userInputValue)
-    if(userInputValue) 
-      fetch(`https://api.openweathermap.org/geo/1.0/direct?appid=d24820a4b09e08d1bb27ae1a68013291&q=${userInputValue}&=&=`)
-    .then(function(res) {
-      return res.json()
-    })
-    .then(function(data) {
-        console.log(data);
-        press(data)
-    })
 
 
 
@@ -40,8 +35,8 @@ function fetchweather()
             return res.json()
           })
           .then(function(data) {
-              console.log(data);
-              currentWeather(data);
-              appendSearch();
+			  const testElement = document.getElementById('test');
+	          testElement.innerHTML = '123'
+			  console.log('DATA', data, testElement)
           })
         };
