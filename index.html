@@ -10,39 +10,43 @@
        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     </head>
 
-    <body>
-        <header class="fluid text-center mb-4 bg-primary">
-            <h1>Weather Dashboard</h1>
-        </header>
-        <div class="container-fluid row">
+<body>
+ <header class="text-center mb-4 bg-primary">
+<h1>Weather Dashboard</h1>
+ </header>
+<div class="container row">
 
-            <div class="col-3" id="searchBox">
-                <h2>Search for a City</h2>
-                <input type="text" placeholder="Enter City" id="citysearch">
-                <button type="button" id="searchBtn"><i class="fa fa-search"></i>Search</button>
-                <ul id="searchList"></ul>
-            </div>
+<div class="col-3" 
+id="searchBox">
+<h2>Search for a City</h2>
+<input type="text" placeholder="Enter City" 
+id="citysearch">
+<button type="button" id="searchBtn"><i 
+class="fa fa-search"></i>Search</button>
+<ul id="searchList"></ul>
+</div>
 
-     <div class="col-9">
-        <div class="row">
-                    <div class="card mb-3 col-12">
-                        <div class="card-body" id="currentCard">
-                            <h4 class="card-title">Card Title</h4>
-                             <ul>
-                                 <li id="temp">temp</li>
-                                 <li id="wind">wind</li>
-                                  <li id="humidity">humidity</li>
-                                  <li id="uvIndex">UV</li>
-                                   </ul>
-                                   </div>
+<div class="col-9">
+ <div class="row">
+<div class="card mb-3 col-12">
+ <div class="body" id="currentCard">
+ <h4 class="title">City</h4>
+
+ <ul>
+<li id="temp">temp</li>
+<li id="wind">wind</li>
+<li id="humidity">humidity</li>
+ <li id="uvIndex">UV</li>
+ </ul>
+</div>
 
 
 
   <div class="card-deck">
- <div class="card text-white bg-primary mb-3" id="card-one">
- <div class="card-header">Card Header</div>
-<div class="card-body">
-<h4 class="card-title">Card title</h4>
+ <div class="card text-white bg-primary mb-3" id="place-one">
+ <div class="header">Date</div>
+<div class="body">
+
     <ul>
      <li class="temp">temp</li>
     <li class="wind">wind</li>
@@ -50,53 +54,56 @@
     </ul>
 </div>
 </div>
- <div class="card text-white bg-primary mb-3" id="card-two">
-    <div class="card-header">Card Header</div>
-     <div class="card-body">
-         <h4 class="card-title">Card title</h4>
-         <ul>
-            <li class="temp">temp</li>
-            <li class="wind">wind</li>
-            <li id="test" class="humidity">humidity</li>
-            </ul>
-             </div>
-             </div>
-              <div class="card text-white bg-primary mb-3" id="card-three">
-                        <div class="card-header">Card Header</div>
-                        <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <ul>
-                                <li class="temp">temp</li>
-                                <li class="wind">wind</li>
-                                <li class="humidity">humidity</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card text-white bg-primary mb-3" id="card-four">
-                        <div class="card-header">Card Header</div>
-                        <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <ul>
-                                <li class="temp">temp</li>
-                                <li class="wind">wind</li>
-                                <li class="humidity">humidity</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card text-white bg-primary mb-3" id="card-five">
-                        <div class="card-header">Card Header</div>
-                        <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <ul>
-                                <li class="temp">temp</li>
-                                <li class="wind">wind</li>
-                                <li class="humidity">humidity</li>
-                            </ul>
-                        </div>
+ 
+<div class="card text-white bg-primary mb-3" id="place-two">
+    <div class="header">Date</div>
+     <div class="body">
+       
+ <ul>
+<li class="temp">temp</li>
+<li class="wind">wind</li>
+<li id="test" class="humidity">humidity</li>
+ </ul>
+ </div>
+</div>
+<div class="card text-white bg-primary mb-3" id="place-three">
+<div class="header">Date</div>
+ <div class="body">
+                            
+    <ul>
+  <li class="temp">temp</li>
+ <li class="wind">wind</li>
+<li class="humidity">humidity</li>
+   </ul>        
+  </div>
+</div>
+                   
+<div class="card text-white bg-primary mb-3" id="place-four">
+ <div class="header">Date</div>
+<div class="body">
+                          
+ <ul>
+  <li class="temp">temp</li>
+ <li class="wind">wind</li>
+<li class="humidity">humidity</li>
+</ul>
+ </div>
+  </div>
+                  
+  <div class="card text-white bg-primary mb-3" id="place-five">
+ <div class="header">Date</div>
+<div class="body">
+                           
+<ul>
+    <li class="temp">temp</li>
+    <li class="wind">wind</li>
+     <li class="humidity">humidity</li>
+     </ul>
+</div>
 
 
 
-    </body>
+</body>
 
 
     <script src="./assets/js/script.js"></script>
