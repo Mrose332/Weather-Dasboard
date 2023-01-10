@@ -2,7 +2,7 @@
 Weather-Dashboard using server-side API's 
 
 ## Description
-A weather-dashbaord that provides weather for any ciy searched for
+A weather-dashbaord that provides weather for any city searched for
 
 ## User Story
 
