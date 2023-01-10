@@ -7,7 +7,7 @@ searchBtn.addEventListener("click", fetchweather)
 let cityInput = document.getElementById("citysearch");
 
 
-//function for API
+//function for API to retrieve data
 function fetchweather()  {
 	var userInputValue = cityInput.value.trim();
 	document.getElementById('cardTitle').innerHTML = userInputValue;
