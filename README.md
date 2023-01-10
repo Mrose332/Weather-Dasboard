@@ -38,3 +38,6 @@ https://github.com/Mrose332/Weather-Dasboard.git
 
 You can access the deployed application with the GitHub Pages link: 
 
+ https://mrose332.github.io/Weather-Dasboard/
+ 
+
