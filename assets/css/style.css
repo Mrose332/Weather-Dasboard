@@ -10,14 +10,14 @@ body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
     
 }
-h3{
-    font-weight: bold;
+h4{
+    font-weight:500;
+    color: rgb(65, 80, 29);
 }
-.forecast{
-    
-    font-size: 0.9em;
-}
-span{
-    font-size: 1em;
-}
+
+ul {
+    list-style: none;
+    padding: 0;
+  }
+
 

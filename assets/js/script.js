@@ -7,7 +7,7 @@ searchBtn.addEventListener("click", fetchweather)
 let cityInput = document.getElementById("citysearch");
 
 
-
+//function for API
 function fetchweather()  {
 	var userInputValue = cityInput.value.trim();
 	document.getElementById('cardTitle').innerHTML = userInputValue;
@@ -21,9 +21,6 @@ function fetchweather()  {
 				latlon(data)
 			})
 }
-
-
-
 
     function latlon(data) {
         var latitude = data[0].lat
@@ -39,7 +36,8 @@ function fetchweather()  {
               const dayThree = new Date(data.daily[2].dt * 1000);
               const dayFour = new Date(data.daily[3].dt * 1000);
               const dayFive = new Date(data.daily[4].dt * 1000);
-	          document.getElementById('dayOneDate').innerHTML = `${dayOne.toLocaleString()}`
+	         
+              document.getElementById('dayOneDate').innerHTML = `${dayOne.toLocaleString()}`
 	          document.getElementById('dayTwoDate').innerHTML = `${dayTwo.toLocaleString()}`
               document.getElementById('dayThreeDate').innerHTML = `${dayThree.toLocaleString()}`
               document.getElementById('dayFourDate').innerHTML = `${dayFour.toLocaleString()}`
@@ -51,8 +49,27 @@ function fetchweather()  {
               document.getElementById('dayFourTemp').innerHTML = `Temp: ${data.daily[3].temp.day}`
               document.getElementById('dayFiveTemp').innerHTML = `Temp: ${data.daily[4].temp.day}`
 
-              document.getElementById('dayOneHumidity').innerHTML = `Humidity: ${data.daily[0].humidity.day}`
+              document.getElementById('dayOneWind').innerHTML = `Wind Speed: ${data.daily[0].wind_speed}`
+              document.getElementById('dayTwoWind').innerHTML = `Wind Speed: ${data.daily[1].wind_speed}`
+              document.getElementById('dayThreeWind').innerHTML =`Wind Speed: ${data.daily[2].wind_speed}`
+              document.getElementById('dayFourWind').innerHTML = `Wind Speed: ${data.daily[3].wind_speed}`
+              document.getElementById('dayFiveWind').innerHTML = `Wind Speed: ${data.daily[4].wind_speed}`
 
+              
+              document.getElementById('dayOneHumidity').innerHTML = `Humidity: ${data.daily[0].humidity}`
+              document.getElementById('dayTwoHumidity').innerHTML = `Humidity: ${data.daily[1].humidity}`
+              document.getElementById('dayThreeHumidity').innerHTML = `Humidity: ${data.daily[2].humidity}`
+              document.getElementById('dayFourHumidity').innerHTML = `Humidity: ${data.daily[3].humidity}`
+              document.getElementById('dayFiveHumidity').innerHTML = `Humidity: ${data.daily[4].humidity}`
+
+
+              document.getElementById('dayOneUvIndex').innerHTML = `UV Index: ${data.daily[0].uvi}`
+              document.getElementById('dayTwoUvIndex').innerHTML = `UV Index: ${data.daily[1].uvi}`
+              document.getElementById('dayThreeUvIndex').innerHTML = `UV Index: ${data.daily[2].uvi}`
+              document.getElementById('dayFourUvIndex').innerHTML = `UV Index: ${data.daily[3].uvi}`
+              document.getElementById('dayFiveUvIndex').innerHTML = `UV Index: ${data.daily[4].uvi}`
+              
+           
 	          document.getElementById('temp').innerHTML =  `Temp: ${data.current.temp}°F`;
 			  document.getElementById('wind').innerHTML = `Wind Speed: ${data.current.wind_speed} MPH`;
 			  document.getElementById('humidity').innerHTML = `Humidity: ${data.current.humidity}%`;
